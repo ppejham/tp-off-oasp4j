@@ -37,6 +37,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @return name the name of this special.
    */
+  @Override
   @Column(unique = true)
   public String getName() {
 
@@ -48,6 +49,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @param name the name of this special.
    */
+  @Override
   public void setName(String name) {
 
     this.name = name;
@@ -78,6 +80,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @return activePeriod the {@link WeeklyPeriodEmbeddable active period} this special applies for.
    */
+  @Override
   public WeeklyPeriodEmbeddable getActivePeriod() {
 
     return this.activePeriod;
@@ -88,6 +91,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @param activePeriod the {@link WeeklyPeriodEmbeddable active period} this special applies for.
    */
+  @Override
   public void setActivePeriod(WeeklyPeriod activePeriod) {
 
     this.activePeriod = (WeeklyPeriodEmbeddable) activePeriod;
@@ -98,6 +102,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @return specialPrice the new {@link Money special price} for the {@link Offer}.
    */
+  @Override
   public Money getSpecialPrice() {
 
     return this.specialPrice;
@@ -108,6 +113,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @param specialPrice the new {@link Money special price} for the {@link Offer}.
    */
+  @Override
   public void setSpecialPrice(Money specialPrice) {
 
     this.specialPrice = specialPrice;
@@ -140,6 +146,5 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
       this.offer = offerEntity;
     }
   }
-
 
 }
